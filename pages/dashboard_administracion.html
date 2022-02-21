@@ -70,7 +70,7 @@
                     </g>
                     </svg>
                 </div>
-                <span class="nav-link-text ms-1">Dashboard Instituto</span>
+                <span class="nav-link-text ms-1">Administración</span>
                 </a>
             </li> 
             <!-- <li class="nav-item">
@@ -230,100 +230,177 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid">
-        <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../assets/img/curved-images/bannerinstituto.png'); background-position-y: 50%;">
-          <span class="mask  opacity-6"></span>
+        <div class="row">
+            <div class="col-lg-4 mt-lg-0 mt-4">
+                <div class="card">
+                  <div class="card-header pb-0 p-3">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="mb-0">Institutos por país</h6>
+                    </div>
+                  </div>
+                  <div class="card-body p-3">
+                    <ul class="list-group list-group-flush list my--3">
+                        <li class="list-group-item px-0 border-0">
+                            <div class="row align-items-center">
+                            <div class="col-auto">
+                                🇲🇽
+                            </div>
+                            <div class="col">
+                                <p class="text-xs font-weight-bold mb-0">País:</p>
+                                <h6 class="text-sm mb-0">México</h6>
+                            </div>
+                            <div class="col text-center">
+                                <p class="text-xs font-weight-bold mb-0">Total:</p>
+                                <h6 class="text-sm mb-0">12</h6>
+                            </div>
+                            </div>
+                            <hr class="horizontal dark mt-3 mb-1">
+                        </li>
+                        <li class="list-group-item px-0 border-0">
+                            <div class="row align-items-center">
+                            <div class="col-auto">
+                                🇭🇳
+                            </div>
+                            <div class="col">
+                                <p class="text-xs font-weight-bold mb-0">País:</p>
+                                <h6 class="text-sm mb-0">Honduras</h6>
+                            </div>
+                            <div class="col text-center">
+                                <p class="text-xs font-weight-bold mb-0">Total:</p>
+                                <h6 class="text-sm mb-0">6</h6>
+                            </div>
+                            </div>
+                            <hr class="horizontal dark mt-3 mb-1">
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            
         </div>
-        <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
-          <div class="row gx-4">
-            <div class="col-auto">
-              <div class="avatar avatar-xl position-relative">
-                <img src="../assets/img/logoinstituto.jpeg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+        <div class="row mt-4">
+            <div class="col-12">
+              <div class="card">
+                <!-- Card header -->
+                <div class="card-header pb-0">
+                  <div class="d-lg-flex">
+                    <div>
+                      <h5 class="mb-0">Todos los institutos</h5>
+                    </div>
+                    <div class="ms-auto my-auto mt-lg-0 mt-4">
+                      <div class="ms-auto my-auto">
+                        <a href="nuevo_instituto.html" class="btn bg-gradient-primary btn-sm mb-0" >+&nbsp; Nuevo Instituto</a>
+                        <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog mt-lg-10">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLabel">Import CSV</h5>
+                                <i class="fas fa-upload ms-3" aria-hidden="true"></i>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>You can browse your computer for a file.</p>
+                                <input type="text" placeholder="Browse file..." class="form-control mb-3" onfocus="focused(this)" onfocusout="defocused(this)">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="importCheck" checked="">
+                                  <label class="custom-control-label" for="importCheck">I accept the terms and conditions</label>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn bg-gradient-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn bg-gradient-primary btn-sm">Upload</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv" type="button" name="button">Exportar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0 pb-0">
+                  <div class="table-responsive">
+                    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                       <div class="dataTable-container">
+                                <table class="table table-flush dataTable-table" id="products-list">
+                      <thead class="thead-light">
+                        <tr>
+                            <th data-sortable="" style="width: 33.6656%;">
+                                <a href="#" class="dataTable-sorter">Instituto</a>
+                            </th>
+                            <th data-sortable="" style="width: 13.0676%;">
+                                <a href="#" class="dataTable-sorter">Categoría</a>
+                            </th>
+                            <th data-sortable="" style="width: 14.5072%;">
+                                <a href="#" class="dataTable-sorter">Acciones</a>
+                            </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex">
+                                <div class="form-check my-auto">
+                                    <input class="form-check-input" type="checkbox" id="customCheck1" checked="">
+                                </div>
+                                <img class="w-10 ms-3" src="../assets/img/logoinstituto.jpeg" alt="hoodie">
+                                <h6 class="ms-3 my-auto">Instituto Renacimiento</h6>
+                                </div>
+                            </td>
+                            <td class="text-sm">Público</td>
+                            <span class="badge badge-danger badge-sm">Out of Stock</span>
+                            </td>
+                            <td class="text-sm">
+                            <a href="dashboard_instituto.html" data-bs-toggle="tooltip" data-bs-original-title="Ver Instituto">
+                              <i class="fas fa-eye text-secondary" aria-hidden="true"></i>
+                            </a>
+                            <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Editar Instituto">
+                              <i class="fas fa-user-edit text-secondary" aria-hidden="true"></i>
+                            </a>
+                            <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Desactivar instituto">
+                              <i class="fas fa-trash text-secondary" aria-hidden="true"></i>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex">
+                                <div class="form-check my-auto">
+                                    <input class="form-check-input" type="checkbox" id="customCheck1" checked="">
+                                </div>
+                                <img class="w-10 ms-3" src="../assets/img/mexico.png" alt="hoodie">
+                                <h6 class="ms-3 my-auto">Instituto México</h6>
+                                </div>
+                            </td>
+                            <td class="text-sm">Privado</td>
+                            <span class="badge badge-danger badge-sm">Out of Stock</span>
+                            </td>
+                            <td class="text-sm">
+                            <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Ver Instituto">
+                              <i class="fas fa-eye text-secondary" aria-hidden="true"></i>
+                            </a>
+                            <a href="javascript:;" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Editar Instituto">
+                              <i class="fas fa-user-edit text-secondary" aria-hidden="true"></i>
+                            </a>
+                            <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Desactivar instituto">
+                              <i class="fas fa-trash text-secondary" aria-hidden="true"></i>
+                            </a>
+                          </td>
+                        </tr></tbody>
+                      
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-auto my-auto">
-              <div class="h-100">
-                <h5 class="mb-1">
-                  Instituto Renacimiento
-                </h5>
-                <p class="mb-0 font-weight-bold text-sm">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                    remaining essentially unchanged. 
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
-              <div class="nav-wrapper position-relative end-0">
-                <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
-                  
-                </ul>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="row">
+            
         </div>
       </div>
     <div class="container-fluid py-4">
-        <div class="row mt-4">
-            <div class="col-lg-2 col-md-6 mt-lg-0 mt-4">
-                <div class="card">
-                    <div class="card-body">
-                      <p>Total grados</p>
-                      <h3>12</h3>
-                      <span class="badge badge-success">+4.3%</span>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-lg-0 mt-4">
-                <div class="card bg-gradient-primary mt-4">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <h5 class="text-white font-weight-bolder mb-0">
-                              CITA
-                            </h5>
-                          </div>
-                        </div>
-                        <div class="col-4 text-end">
-                            
-                          <div class="icon icon-shape bg-grey shadow text-center border-radius-md">
-                            <i class="fa fa-plus"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-            </div>
-            <div class="col-lg-3 col-md-6 mt-lg-0 mt-4">
-                <div class="card bg-gradient-secondary mt-4">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <h5 class="text-white font-weight-bolder mb-0">
-                              Materia
-                            </h5>
-                          </div>
-                        </div>
-                        <div class="col-4 text-end">
-                            
-                          <div class="icon icon-shape bg-grey shadow text-center border-radius-md">
-                            <i class="fa fa-plus"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-            </div>
-           
-        </div>
-        <div class="row">
-           
-        </div>
+        
+        
         
       <footer class="footer pt-3  ">
         <div class="container-fluid">
