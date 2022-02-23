@@ -232,12 +232,13 @@ sup {
 }
 
 a {
-  color: #cb0c9f;
+  color: #0096c7;
   text-decoration: none;
+  /*  */
 }
 
 a:hover {
-  color: #830866;
+  color: #006aa3;
   text-decoration: none;
 }
 
@@ -3965,19 +3966,23 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-primary {
-  color: #cb0c9f;
-  border-color: #cb0c9f;
+  color: #48cae4;
+  border-color: #48cae4;
+  
+  /* changed */
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #cb0c9f;
-  border-color: #cb0c9f;
+  background-color: #48cae4;
+  border-color: #48cae4;
 }
 
 .btn-check:focus+.btn-outline-primary,
 .btn-outline-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(203, 12, 159, 0.5);
+  box-shadow: 0 0 0 0.2rem #48cae4;
+  
+  
 }
 
 .btn-check:checked+.btn-outline-primary,
@@ -3986,8 +3991,8 @@ fieldset:disabled .btn {
 .btn-outline-primary.active,
 .btn-outline-primary.dropdown-toggle.show {
   color: #fff;
-  background-color: #cb0c9f;
-  border-color: #cb0c9f;
+  background-color: #48cae4;
+  border-color: #48cae4;
 }
 
 .btn-check:checked+.btn-outline-primary:focus,
@@ -3995,12 +4000,12 @@ fieldset:disabled .btn {
 .btn-outline-primary:active:focus,
 .btn-outline-primary.active:focus,
 .btn-outline-primary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.2rem rgba(203, 12, 159, 0.5);
+  box-shadow: 0 0 0 0.2rem 48cae4;
 }
 
 .btn-outline-primary:disabled,
 .btn-outline-primary.disabled {
-  color: #cb0c9f;
+  color: #48cae4;
   background-color: transparent;
 }
 
@@ -20081,7 +20086,8 @@ label,
 }
 
 .bg-gradient-primary {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #415a77 0%, #0096c7 100%); 
+  /* CHANGED */
 }
 
 .bg-gradient-secondary {
@@ -21626,7 +21632,9 @@ hr.horizontal.gray-light {
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
-  background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%);
+  /* background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%); */
+  background-image: linear-gradient(310deg, #415a77 0%, #0096c7 100%); 
+  /* CHANGED */
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon svg .color-background,
@@ -23263,7 +23271,9 @@ p {
 }
 
 .text-gradient.text-info {
-  background-image: linear-gradient(310deg, #2152FF, #21D4FD);
+  /* background-image: linear-gradient(310deg, #2152FF, #21D4FD); */
+  background-image: linear-gradient(310deg, #415a77 0%, #0096c7 100%); 
+
 }
 
 .text-gradient.text-success {
