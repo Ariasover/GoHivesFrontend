@@ -11,7 +11,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%; // allow textareas
+    height: 100%; // allow texactivid
     padding: $form-floating-padding-y $form-floating-padding-x;
     pointer-events: none;
     border: $input-border-width solid transparent; // Required for aligning label's text with the input as it affects inner box model
